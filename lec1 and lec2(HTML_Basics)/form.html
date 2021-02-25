@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+
+</head>
+<body>
+    <h1>Form elements</h1>
+    <input type="password">
+    <br>
+    <input type="text">
+    <br>
+    <input type="email">
+    <br>
+    <input min = 10 max = 20 type="number" >
+    <br>
+    <input type="date" name="" id="">
+    <br>
+    <input type="color" name="" id="">
+    <br>
+    <input type="file">
+    <br>
+    <input type="radio">
+    <br>
+    <input type="checkbox">
+    <br>
+    
+    <!-- To select one button (only possible in radio button not in checkbox) out of many, give 
+         them same names -->
+    <input name = "channel" type="radio">X
+    <input name = "channel" type="radio">Y
+    <input name = "channel" type="radio">Z
+
+
+    <br>
+
+    <!-- In some websites we see that by clicking on option name, it gets selected, so for that 
+         we use label tag, see follows -->
+    <input name = "option" type="checkbox" id="a"> <label for="a">A</label> 
+    <input name = "option" type="checkbox" id="b"> <label for="b">B</label>
+    <input name = "option" type="checkbox">C
+
+    <!-- here on clicking A and B we can select/ deselect it but not in case of C -->
+
+    <br>
+
+    <!-- for some input elements, the tag name is not input , for eg : textarea -->
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <!-- also select tag -->
+    <br>
+    <select>
+        <option>op1</option>
+        <option>op2</option>
+        <option>op3</option>
+        <option>op4</option>
+    </select>
+
+    <!-- To select multiple options using ctrl key in select, see follows -->
+    <select multiple>
+        <option>op1</option>
+        <option>op2</option>
+        <option>op3</option>
+        <option>op4</option>
+    </select>
+
+    <br>
+    <br>
+
+    <!-- NOW WE USE FORM -->
+    <!-- here we make a search button that performs search through google sarch -->
+    <!-- when we search nodejs, the url parameters on top of page are : q=nodejs -->
+    <form action="https://google.com/search">
+        <input name="q">
+        <button type="submit">SEARCH</button>
+    <!-- to open emoji keyboard, press windows button + . -->
+        <button type="reset">❌</button>
+    </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFrames</title>
+</head>
+<body>
+    <h1>iFrames</h1>
+    <h2>Open in frame</h2>
+
+    <ul>
+        <li> <a href="./inner.html">inner.html</a></li>
+        <li> <a href="./index.html" target="frame1">index.html</a></li>
+        <li> <a href="https://thapar.edu" target="frame2">Thapar</a></li>
+        <li> <a href="./iFrames.html" target="frame1">Self page (Recursion)</a></li>
+
+    </ul>
+
+    <!-- (#1) iframe embedds external pages -->
+    <iframe name ="frame1" src="./inner.html" height="400" width="400" frameborder="0"></iframe>
+    <iframe name = "frame2" src="https://thapar.edu" height="400" width="400" frameborder="0"></iframe>
+
+    <!-- (#2) iframes are inline elements -->
+    <!-- (#3) google and some other sites cannot open inside an iframe, so in order to open them, we can write target = "_blank" to open it in new page or 
+                write target = "_parent " to open the desired site in the parent page of the iframe -->
+
+    <!-- in case of nested iFrames, to go on the outermost iframe, we can set target = "_top " in <a> to reach to outermost page -->
+    
+    <!-- In case of nested i frames (check iframe1 and iframe2 files) recursion goes till 1 depth only,
+         as browsers have mechanism to prevent recursion of iframes -->
+
+    
+
+</body>
+</html>

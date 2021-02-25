@@ -1,0 +1,42 @@
+/* div,p etc are called grouping selectors OR type selectors */
+div{
+    color: blue;
+}
+
+p{
+    color: red;
+}
+
+/* This is a universal selector */
+*{
+    font-style: italic;
+}
+
+/* class selector */
+.big {
+
+    font-size: 25pt;
+}
+
+.bold{
+    font-weight: bold;
+}
+/* One element should have one id, multiple melements should not be allocated the same id */
+/* ID selector */
+#one{
+    background-color: darkorange;
+}
+
+#two{
+    padding-left: 40px;
+}
+
+/* Attribute selectors */
+input[disabled]{
+    font-size:30pt ;
+    height: 100px;
+}
+
+input[type = "text"]{
+    height: 100px;
+}

@@ -1,0 +1,8 @@
+/* Dont write style element inside css file */
+        /* here div and p are selectors */
+        div{
+            color: red;
+        }
+        p{
+            background-color: azure;
+        }

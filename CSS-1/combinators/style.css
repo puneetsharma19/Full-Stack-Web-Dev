@@ -1,0 +1,4 @@
+/* Adjacent sibling combinators: In this two adjacent elements are selected together */
+h2 + p{
+    color: blue;
+}

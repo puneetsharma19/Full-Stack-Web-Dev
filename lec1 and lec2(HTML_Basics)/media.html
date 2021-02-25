@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Media</h1>
+    <img src="https://cdn.pixabay.com/photo/2015/03/28/16/40/lake-696098_1280.jpg" alt="Sample photo" height="300">
+    <video controls src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" height="300" ></video>
+
+    <!-- NOTE : whenever u wanna make pic/ video small sized, change only 1 parameter i.e. either height
+                or width not both as changing both will disturb the ratio of image, it may get straetched
+                So only change one parameter, other changes automatically  -->
+
+
+    <!-- By writing preload = "none" we cannot know video length, size, thumbnail and other things till we
+         press play button. By default preload = "auto" means all data about video will be visible-->
+    <video  preload = "none" controls src="./video1.mp4" height="300"></video>
+
+    <!-- ctr + shift + r is called hard refresh, it removes cache from browser -->
+    
+    <audio controls src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"></audio>
+
+    <!-- video elements do not get loaded completely at once but in chunks -->
+    
+
+
+</body>
+</html>
