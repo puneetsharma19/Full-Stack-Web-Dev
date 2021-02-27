@@ -1,4 +1,32 @@
-/* Adjacent sibling combinators: In this two adjacent elements are selected together */
+/* Type of cominators 
+1. Adjacent sibling combinators
+    Syntax : A + B
+2. General sibling combinators
+3. Child combinator
+4. Descendant combinator
+*/
+
+
+/* 1. Adjacent sibling combinators: In this two adjacent elements are selected together */
 h2 + p{
+    font-weight: bold;
     color: blue;
 }
+
+/* 2. General sibling combinator */
+/* It will work after first tag will be affected not the siblings before it */
+h2 ~ p{
+    color: red;
+}
+
+/* 3. Child combinator */
+section > p{
+    background-color: aqua;
+}
+
+/*4.  Descendant combinator */
+section p{
+    font-family: monospace;
+    font-style: italic;
+}
+
