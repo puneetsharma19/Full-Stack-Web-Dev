@@ -1,0 +1,30 @@
+/* '*' is applied to refer to each element on page */
+
+*{
+    color: red;
+}
+
+div{
+    /* shiftdiv element by 30px to the left */
+    margin-left: 30px; 
+}
+
+p{
+    font-size: 40pt;
+}
+
+#p2{
+    font-family: monospace;
+}
+
+#p3{
+    margin-left: 20px;
+}
+
+.osmpara{
+    background-color: lightpink;
+}
+
+.bigpara{
+    font-size: 70px;
+}
