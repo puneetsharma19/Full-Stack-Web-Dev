@@ -40,3 +40,32 @@ input[disabled]{
 input[type = "text"]{
     height: 100px;
 }
+
+.box{
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    padding: 10px;
+    color: darkslategray;
+}
+
+/* hover means mouse goes over the element */
+.box:hover{
+    background-color: green;
+    color: beige;
+    font-weight: bold;
+}
+
+
+/* Active happens when we click */
+.box:active{
+    height: 100px;
+    width: 100px;
+    font-size: 25pt;
+}
+
+/* focus happens when keyboard is on the element that is we are typing something */
+input:focus{
+    font-size: 25pt;
+    width: 200px;
+}
