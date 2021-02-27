@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common CSS Properties</title>
+    <link rel="stylesheet" href="common_css._properties.css">
+
+</head>
+<body>
+    <!-- 1. Inline and Block elements -->
+
+    <!-- <p> is a block element, h1 to h6 are block -->
+    <p>Para1</p>Some more text
+    <!-- Above written "Some more text is called bare text, bare text is always inline" -->
+    <b>Bold text</b> 
+    <b style="display: block;">Bold made block using inline css</b>See this is bare text after block bold element
+    <br>
+    <br>
+    <!-- NOTE: Block element can set margin, padding, border etc -->
+
+    <!-- DIV is a block element and SPAN is an inline element -->
+    <div>This is a div, div is a <em><b>BLOCK</b></em> element</div>
+    <span>This is span, span is s <em><b>INLINE</b></em> element</span>
+
+    <!-- Group and span are very useful for GROUPING data. They do not have any styling by default -->
+    <br><br><br><br>
+    <!-- MARGINS, PADDINGS AND BORDERS -->
+    <div class="box" id="div1">
+        one
+        <div class="box" id="div2">
+            two
+            <div class="box" id="div3">
+                three
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

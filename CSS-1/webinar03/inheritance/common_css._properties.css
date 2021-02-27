@@ -1,0 +1,19 @@
+.box{
+    /* Simply writing margin = 20px makes top, right, left and bottom margin all equal to 20px */
+    /* MARGIN MEIN PARENT KA COLOR DIKHTA HAI AUR PADDING MEIN KHUD KA COLOR */
+    margin: 20px;
+    padding: 10px;
+    border: solid black 10px;
+}
+
+#div1{
+    background-color: lightgreen;
+}
+
+#div2{
+    background-color: lightsalmon;
+}
+
+#div3{
+    background-color: lightcyan;
+}
