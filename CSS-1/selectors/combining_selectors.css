@@ -1,0 +1,18 @@
+li{
+    font-weight: bold;
+}
+
+/* A > B means direct child */
+ul > li{
+    color: blue;
+}
+
+ol > li{
+    color: #ff0000;
+}
+
+/* A B means B is a descendant of A may be child or grandchild */
+ul ul{
+    font-style: italic;
+}
+
