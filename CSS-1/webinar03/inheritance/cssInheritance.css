@@ -1,0 +1,35 @@
+/* Id takes precedence over class and class takes precedence elelemnt and element over * 
+    ID > Class > element > *
+    */
+
+
+*{
+    background-color: cyan;
+}
+
+div{
+    background-color: lime;
+}
+
+#id1{
+    background-color: lightgreen;
+}
+
+.cl1{
+    background-color: lightcoral;
+}
+
+.cl1{
+    background-color:  blue;
+}
+
+
+/* IMPORTANT NOTE:
+    If same property is written again in css then the property written later on in file
+    overrides or we can say takes precedence over the previous property    
+*/
+#id1{
+    background-color: maroon;
+}
+
+

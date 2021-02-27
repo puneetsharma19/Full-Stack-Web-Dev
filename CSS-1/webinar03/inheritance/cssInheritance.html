@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssInheritance</title>
+    <link rel="stylesheet" href="cssInheritance.css">
+
+    <style>
+        *{
+            background-color: #aaaaff;
+        }
+    </style>
+
+    <!-- if we apply css through both style element and a css file to an element, then the one which is
+         written later on takes precedence and gets applied to the element -->
+
+
+</head>
+<body>
+    <div class="cl1" id="id1">Div1</div>
+    <div class="cl1" id="id2">Div2</div>
+    <div class="cl2" id="id3">Div3</div>
+
+    <!-- Inline css takes precedence over everything -->
+    <div style="background-color: #778899;">Div4</div>
+</body>
+</html>
