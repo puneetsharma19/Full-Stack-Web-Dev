@@ -1,0 +1,22 @@
+#para1{
+    font-size: 30pt;
+    /* we can also use font-size as 2em ,3em etc; em is the width of the largest character in english */
+    /* We can also use vh (view height) font-size: 3vh; 
+        1 vh = 1/100 of window height */
+}
+
+#para2{
+    /* font-family: monospace; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* if seoge ui not available then check tahoma if that is also not available then geneva...and so on */
+}
+
+#para3{
+    font-style: italic;
+    font-weight: bold;
+}
+
+#para4{
+    word-spacing: 10px;
+    letter-spacing: 2px;
+}
