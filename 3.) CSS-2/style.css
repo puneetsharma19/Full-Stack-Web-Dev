@@ -1,0 +1,49 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: indigo;
+    margin: 30px;
+    padding: 20px;
+    color: beige;
+}
+
+
+/* SCALE TRANSFORM */
+/* If we simply do height and width of .one double then the content inside would not change its font size 
+    but if we do transform scale(2,2) everything including the font size of content gets doubled*/
+/* we can also do scaleX and scaleY which does changes along x and y axis repsctively */
+.one{
+    transform: scale(2,2);
+}
+
+/* ROTATE TRANSFORM */
+.two{
+    transform: rotate(30deg);
+}
+
+.three{
+    /* rotates along x-axis */
+    transform: rotateX(80deg);
+}
+
+/* TRANSLATE TRANSFORM */
+.four{
+    /* translate(x,y) */
+    transform: translate(-50px,-0px);
+}
+
+/* mixing transforms */
+/* NOTE: Here order matters, if we rotate first then translate, it goes along the new rotated axis */
+.five{
+    transform: translateX(100px) rotate(45deg);
+}
+
+/* SKEW TRANSFORM */
+.six{
+    /* turns rectange into parallelograms */
+    transform: skewX(40deg);
+}
+
+.seven{
+    transform: skew(30deg,30deg);
+}
