@@ -1,0 +1,28 @@
+div.btn{
+    margin: 100px;
+    background-color: peru;
+    color: white;
+    font-size: 30pt;
+    padding: 50px;
+    width: 200px;
+
+    /* to make corners round */
+    border-radius: 10px;
+    /* x axis and y axis in shadow respectively and third parameter is to blur the shadow called GAUSSIAN BLUR */
+    box-shadow: grey 10px 10px 10px;
+    /* all changes of css will happen slowly if we add transition like: */
+    transition: 0.8s;
+}
+
+div.btn:hover{
+    transform: translate(-10px,-10px);
+    /* in order to not see shadow moving : */
+    box-shadow: grey 20px 20px 20px;
+    transition: 0.5s;
+}
+
+div.btn:active{
+    transform: translate(5px,5px);
+    box-shadow: grey 5px 5px 3px;
+    transition: 0.2s;
+}
