@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background-color: bisque;
+    flex-wrap: wrap;
+    /* if we do reverse wrap, the inside elements start from bottom right corner  */
+    margin: 40px;
+    flex-direction: row;
+    /* we can also use flex direction as row-reverse means 5 4 3 2 1 */
+    /* There are total 8 ways to set flex wrap and direction: 2 at each corner  */
+
+
+    /* how items within a row are aligned in order */
+    justify-content: center;
+
+}
+
+
+.container2{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background-color: bisque;
+    flex-wrap: wrap;
+
+    margin: 40px;
+    flex-direction: row;
+    /* align-items: baseline ; -> all the text within items becomes at same level means 1,2,3.. all become at same level */
+    /* align-items aligns items within the row perpendicularly */
+    align-items: flex-end; /* every item sticks to the bottom*/
+    align-content: flex-end; /* how all the rows together are aligned*/
+}
+
+.item{
+    border: dotted maroon 2px;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: lightseagreen;
+    font-size: 20pt;
+    color: white;
+
+    text-align: center;
+    /* NOTE: to VERTICALLY align the text inside item exactly in between the item, there is no specific techinique
+             we can use something called line-height as follows: */
+
+    line-height: 50px;
+    /* line height == height */
+}
