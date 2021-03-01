@@ -1,0 +1,17 @@
+
+.container{
+    display: inline-flex;
+    height: 400px;
+    width: 200px;
+    background-color: blue;
+    flex-wrap: wrap;
+    border: solid red 2px;
+    
+}
+
+.box{
+    background-color: yellow;
+    border: solid black 1px;
+    height: 50px;
+    width: 50px;
+}
