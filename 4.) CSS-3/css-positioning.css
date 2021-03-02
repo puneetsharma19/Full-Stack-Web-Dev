@@ -1,0 +1,73 @@
+
+    /*  There are 5 types of css postioning:
+         > static
+         > relative
+         > absolute
+         > fixed 
+         > sticky 
+    */
+
+/* static is by default */
+/* relative :from original position */
+.container{
+    height: auto;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    background-color: linen;
+    z-index: 1;
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-color: mediumslateblue;
+    color: white;
+    z-index: 3;
+}
+
+
+.container.one > .item.four{
+    position: absolute;
+    /* position: absolute:      
+       absolute :from parent
+    */
+    left: 100px;
+    /* shifts to left by 100px */
+    top: 100px;
+}
+
+
+/* position : fixed
+   here element gets fixed with respect to the window    
+*/
+.one > .five{
+    position: fixed;
+    left: 100px;
+    top: 100px;
+}
+
+.container > .one{
+    position: sticky;
+    top: 30px;
+}
+
+.container > .two{
+    position: sticky;
+    top: 30px;
+    z-index: 2;
+    /* making z-index negative makes the item hidden behind the container */
+    /* if we remove bg color of container then the item gets visible */
+}
+
+.one > .three{
+    position: relative;
+    z-index: 3;
+}
+/* nth child properties */
+
+.item:nth-child(5n){
+    background-color: brown;
+}
+
