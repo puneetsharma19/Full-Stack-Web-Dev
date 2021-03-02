@@ -48,6 +48,9 @@ function beta(){
 }
 
 // Polymorphism in JS eg:
+// here polymorphism does not works like in java and c++ that is by defining more than one function definitions
+// because writing 2 defintions of functions will override previous.
+
 function area(height, width){ // no need to specify data types here
     return height*width
 }
@@ -71,3 +74,44 @@ console.log('area(3,4) = ', area(3,4))
         return Math.PI*height*height
     }
 */
+
+// PASSING MORE PARAMETERS TO FUNCTION THAN DEFINED :
+function hello(){
+    console.log('hello ' + arguments[0] + arguments[1]);
+}
+
+hello('Puneet','Sharma')
+
+
+// if we set arguments inside the function : 
+function hello2(){
+    let arguments = 'abcderf' //this overrides the definition of arguments
+    console.log('hello2 ' + arguments[0] + arguments[1]);
+}
+
+hello2()
+//it prints first 2 charcters of the string as it is now treated as arguments
+
+
+//HIGHER ORDER FUNCTIONS:
+/*
+    If a language allows to pass functions as arguments or allows functions to return functions,
+    then such a language supports HIGHER ORDER FUNCTIONS.
+
+*/
+
+function createGreeter(greeting){
+
+    function greet(name){
+        console.log(greeting,name())
+    }
+
+    return greet
+}
+
+function getname(){
+    return document.getElementById('namebox').value
+}
+
+let g1 = createGreeter('Good Morning')
+let g2 = createGreeter('Good Evening')
