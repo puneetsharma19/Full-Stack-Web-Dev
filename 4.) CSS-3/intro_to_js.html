@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Javascript</title>
+
+    <script>
+        console.log('world')
+        // if we write alert here in head, then till the user presses ok button, the rendering of the page stops.
+        alert('Hey there!')
+    </script>
+
+    <!-- Linking external js file -->
+    <!-- script src tags need not to be written in the head, can be written inside body -->
+    <!-- async: async means that while your htl page is getting parsed, browser will parallely download the script -->
+    <!-- defer: means that script is meant to be executed after the html has been rendered --->
+    <script async defer src="js1.js">
+        // if we write something here in the body of this tag, the body of this tag won't be evaluated.
+    </script>
+
+
+
+
+</head>
+<body>
+    <h1>Intro to JS</h1>
+    <p>Trying to use js</p>
+    <script type="text/javascript">
+        // text/javascript is by default, no need to write
+        console.log('hello')
+        
+    </script>
+</body>
+</html>
