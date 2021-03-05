@@ -57,7 +57,7 @@ function area(height, width){ // no need to specify data types here
 
 console.log('area(3,4) = ', area(3,4))
 
-/* NOTE : if we write area(4) output :- NaN. I f we do not pass all the arguments, the unpassed arguments
+/* NOTE : if we write area(4) output :- NaN. If we do not pass all the arguments, the unpassed arguments
           become undefined. */
 
 /* now if we write function as : 
