@@ -21,7 +21,10 @@ p{
 .bold{
     font-weight: bold;
 }
-/* One element should have one id, multiple melements should not be allocated the same id */
+
+
+
+/* One element should have one id, multiple elements should not be allocated the same id */
 /* ID selector */
 #one{
     background-color: darkorange;

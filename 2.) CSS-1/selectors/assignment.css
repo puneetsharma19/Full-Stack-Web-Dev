@@ -1,7 +1,7 @@
-li  + li {
+li  > ul {
     display: none;
 }
 
-li:hover li{
-    display: block;
+li:hover >ul {
+    display: inline;
 }

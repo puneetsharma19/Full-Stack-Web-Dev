@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    background-color: cyan;
+    border: solid black 5px;
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    border: solid black 2px;
+    margin: 20px;
+}
+
+
+.item.player{
+    background-color: green;
+}
+
+.item.enemy1{
+    background-color: blue;
+}
+
+.item.enemy2{
+    background-color: maroon;
+}
+
+
+
+@keyframes move{
+    50%{
+        transform: translateY(480px);
+    }
+}
