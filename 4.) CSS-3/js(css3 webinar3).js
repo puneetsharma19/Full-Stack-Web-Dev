@@ -89,7 +89,7 @@ function hello2(){
     console.log('hello2 ' + arguments[0] + arguments[1]);
 }
 
-hello2()
+hello2('Puneet','Sharma')
 //it prints first 2 charcters of the string as it is now treated as arguments
 
 

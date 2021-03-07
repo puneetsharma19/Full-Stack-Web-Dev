@@ -34,7 +34,7 @@
 
 .item{
     border: dotted maroon 2px;
-    margin: 10px;
+    /* margin: 10px; */
     height: 50px;
     width: 50px;
     background-color: lightseagreen;

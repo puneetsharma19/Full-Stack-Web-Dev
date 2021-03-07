@@ -1,0 +1,63 @@
+.container{
+    margin: auto;
+    height: 500px;
+    width: 700px;
+    background-color: aqua;
+    border: solid black 5px;
+}
+
+.item{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: solid black 1px;
+}
+
+
+.player{
+    background-color: green;
+    transform: translateY(225px);
+    animation: move 5s infinite;
+    animation: rotation 0.5s infinite;
+    /* animation: move 5s infinite linear;
+    animation: rot 0.5s infinite linear; */
+    animation-play-state: paused;
+
+}
+
+.container:active .player {
+    animation-play-state: running;
+}
+
+
+.enemy{
+    margin-left: 150px;
+    animation: bounce 3s infinite;
+}
+
+.one{
+    background-color: maroon;
+    animation-timing-function: ease-in;
+}
+
+
+
+.two{
+    background-color: midnightblue;
+    animation-timing-function: ease-out;
+}
+
+@keyframes bounce{
+    50%{
+        transform: translateY(450px);
+    }
+}
+
+@keyframes move {
+    50% {
+        transform: translate(650px , 225px);
+    }
+}
+
+
+

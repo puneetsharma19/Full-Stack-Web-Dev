@@ -25,6 +25,7 @@
 }
 
 /* We add animations as follows:  */
+/* @keyframes — Describes the aspect of intermediate steps in a CSS animation sequence. */
 @keyframes bounce {
     /* we write frames inside it */
     /* when 0% of my animation is done, what rules do i want */

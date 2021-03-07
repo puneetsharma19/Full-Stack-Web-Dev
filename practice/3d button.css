@@ -1,0 +1,26 @@
+div.btn{
+    margin: 50px;
+    /* height: 100px; */
+    width: 200px;
+    background-color: rebeccapurple;
+    font-size: 22pt;
+    color: azure;
+    border: solid black 2px;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: rgb(95, 94, 94) 10px 10px 10px;
+}
+
+div.btn:hover{
+    transform: translate(-10px,-10px);
+    box-shadow: rgb(95, 94, 94) 20px 20px 20px;
+    transition: 0.5s;
+}
+
+
+div.btn:active{
+    transform: translate(5px,5px);
+    box-shadow: rgb(95, 94, 94) 5px 5px 3px;
+    transition: 0.2s;
+}
