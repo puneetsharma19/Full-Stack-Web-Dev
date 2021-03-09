@@ -48,7 +48,7 @@ console.log(arr)
 //Object Oriented Programming in Javascript
 //NOTE: Javascript  allows to create objects without defining the class
 
-//One way of creating ja object without using class
+//One way of creating js object without using class
 //this is called JSON (Javascript Object Notation)
 var bird = {} ;// empty object
 var bird = {
@@ -58,6 +58,7 @@ var bird = {
     eggs:['one','two','three','four'],
 
     //the below way of defining functions is called function expression
+    //function expression mein variable mein store krte hai function ko aur declarartion mein seedha hi declare kar dete hai
     fly:function(){
         console.log('bird is flying',this.x,this.y); // to access variable of the class, this pointer is used
     }
@@ -73,16 +74,18 @@ bird.eggs.forEach(function(val,idx){
 
 
 
+
 //More ways to creat Javascript objects
+
 function Fruit(taste, color){
     this.color = color;
     this.taste = taste;
 }
 
 //new keyword
-
 let mango = new Fruit('sweet','yellow');
 let orange = new Fruit('sour','orange');
+
 
 
 var apple = {
@@ -96,7 +99,7 @@ console.log(apple)
 
 //Another way to create JS object using 'class' keyword
 
-//class declaration (would not be hoisted)
+//class declaration (would be hoisted but variable of class cannot be used before defining the variable)
 class FruitClass{
     constructor(taste,color){
         this.taste = taste

@@ -130,7 +130,7 @@ console.log(notes)
 
 
 
-//CONCAT (concat is also non destructive in nature means does not changes the array)
+//CONCAT (concat is also non destructive in nature , means does not changes the array)
 notes = ['do','re','mi']
 console.log(notes.concat('sa'))
 console.log(notes) //'sa' will not be present here

@@ -61,7 +61,7 @@ let obj = {
 }
 
 /* IMPORTANT NOTE : The 'this' pointer is binded on run time, i.e if in above case, if function d is called via obj, 
-                    i.e obj.d will run console.log(this) and here this will poin to obj, but,
+                    i.e obj.d will run console.log(this) and here this will point to obj, but,
                     if we do let z = obj.d and then do z(), it will print window because d is not called via
                     an object here and window is the current scope
 */
