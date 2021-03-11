@@ -49,7 +49,7 @@ let obj2 = Object.create(obj1) // this is called prototype based inheritance
 // obj1 == obj2 -> false
 
 /*obj2.__proto__  -> this is used only for debugging
-    NOTE : obj.__proto__ == obj1 -> true this means obj2.__proto__ is actually obj1
+    NOTE : obj2.__proto__ == obj1 -> true this means obj2.__proto__ is actually obj1
     
     
     obj2.a -> it will try to find a in obj2
