@@ -71,6 +71,43 @@ String.prototype.charAt = function() {return 'x'}
 // now if we do console.log(str.charAt(2)) -> 'x'
 
 // String.prototype contains all default string functions
-// like charAt, indexOf, substring
+// like charAt, indexOf, substring.
+
+Array.prototype.joinOriginal = Array.prototype.join
+Array.prototype.join = function(){
+    console.log('join called on ', this)
+    return this.joinOriginal(...arguments)
+}
+
+
+/* join in  array -> Reference MDN
+    const elements = ['Fire', 'Air', 'Water'];
+
+    console.log(elements.join());
+        // expected output: "Fire,Air,Water"
+
+    console.log(elements.join(''));
+        // expected output: "FireAirWater"
+
+    console.log(elements.join('-'));
+        // expected output: "Fire-Air-Water"
+*/
+
+/*
+    Array.prototype is an object, having join function
+    Array.prototype{
+            ...
+            ...
+            joinOriginal: function () {}, //here the reference of join function is copied in joinOriginal 
+            join : function () { our function } // now we are calling the joinOriginal function through this
+            ...
+    }
+
+*/
+
+
+
+
+
 
 
