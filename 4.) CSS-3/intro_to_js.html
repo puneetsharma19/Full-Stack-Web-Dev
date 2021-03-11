@@ -8,17 +8,20 @@
 
     <script>
         console.log('world')
-        // if we write alert here in head, then till the user presses ok button, the rendering of the page stops.
+        // if we write alert here in head, then till the user presses ok button, the rendering of the page stops
+        //because browser is reading html line by line, so inless user presses OK, it stops and the remaining page is not yet read by the browser
         alert('Hey there!')
     </script>
 
     <!-- Linking external js file -->
     <!-- script src tags need not to be written in the head, can be written inside body -->
-    <!-- async: async means that while your htl page is getting parsed, browser will parallely download the script -->
+    <!-- async: async means that while your html page is getting parsed, browser will parallely download the script -->
     <!-- defer: means that script is meant to be executed after the html has been rendered --->
     <script async defer src="js1.js">
         // if we write something here in the body of this tag, the body of this tag won't be evaluated.
     </script>
+
+
 
 
 
