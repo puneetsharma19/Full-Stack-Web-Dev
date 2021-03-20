@@ -25,10 +25,20 @@ window.onload = function (){
             event.target.parentElement.remove()
         }
 
-        UPbtn.onclick = function (event){
-            let curr = event.target.parentElement
-            let next = curr.previousElementSibling
-            
+        UPbtn.onclick = function(event){
+
+            // event.target.parentElement.parentElement -> todolist
+            // Syntax : let insertedNode = parentNode.insertBefore(newNode, referenceNode)
+            event.target.parentElement.parentElement.insertBefore(
+                event.target.parentElement, event.target.parentElement.previousElementSibling
+            )
+        }
+
+        DNbtn.onclick = function(event){
+
+            event.target.parentElement.parentElement.insertBefore(
+                event.target.parentElement.nextElementSibling, event.target.parentElement
+            )
         }
 
         //Alternate method for above scenario :
