@@ -3,13 +3,22 @@
     width: 400px;
     height: 400px;
     background-color: lightpink;
+    /* font-size: 0; */
 }
 
 /* IMPORTANT NOTE */
 /* INLINE vs INLINE-BLOCK
     In inline elements, we cannot set height and width of the element, but if we make it inline-block,
-    we can. Also there is a space between inline-block elements and not in inline elements. This is so in 
-    order to differentiate between inline and inline-block elements. */
+    we can. Also there is a space between inline-block elements and in inline elements which is because we
+    formatted the html document normally like:
+    <div></div>
+    <div></div>
+    The space between the two div creates a space between the blocks being displayed.
+    To remove this,
+    1.) Make font-size in parent element = 0 OR
+    2.) Format the document in the fashion: <div></div><div></div>
+    3.) Make the parent element a flex
+    This is so in order to differentiate between inline and inline-block elements. */
 
 /* NOTE: If we make parent element to FLEX then we do not need to make inline-block in place of inline */
 .item{
