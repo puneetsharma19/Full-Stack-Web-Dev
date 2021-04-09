@@ -1,3 +1,8 @@
+:root{
+    --speed : 5;
+}
+
+
 .machine{
     display: flex;
     height: 300px;
@@ -22,8 +27,18 @@
 }
 
 .slot > .value{
-    animation: spin 0.3s;
-    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-iteration-count: 25;
+    animation-duration: 0.3s;
+    animation-play-state: paused;
+}
+
+.btn > button{
+    color: white;
+    background-color: red;
+    height: 50px;
+    width: 175px;
+    margin-left: 400px;
 }
 
 @keyframes spin{
