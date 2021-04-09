@@ -21,8 +21,8 @@
 
 }
 
-.value{
-    animation: spin 1s;
+.slot > .value{
+    animation: spin 0.3s;
     animation-iteration-count: infinite;
 }
 
