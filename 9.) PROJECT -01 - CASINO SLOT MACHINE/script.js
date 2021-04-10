@@ -5,7 +5,7 @@
 values = ['🤑','😂', '😃', '😎', '😍', '🤑', '😭', '😢', '🤑']
 
 function getRandomValue (){
-    return values[Math.floor(Math.random()*2)]
+    return values[Math.floor(Math.random()*3)]
 }
 
 
@@ -30,7 +30,7 @@ startBtn.onclick = function(){
                     window.setTimeout(function(){
                         alert("YOU WIN !")
                         document.location.reload()
-                    },1200)
+                    },300)
                 }
                 
                 else{
@@ -39,9 +39,9 @@ startBtn.onclick = function(){
                     window.setTimeout(function(){
                         alert("YOU LOOSE😥")
                         document.location.reload()
-                    },1200)
+                    },300)
                 }
-            },1000)
+            },200)
             }
             value1.innerText = getRandomValue()
             value2.innerText = getRandomValue()
