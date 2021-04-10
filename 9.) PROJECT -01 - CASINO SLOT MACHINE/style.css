@@ -31,6 +31,7 @@
     animation-iteration-count: 30;
     animation-duration: 0.1s;
     animation-play-state: paused;
+    animation-timing-function: ease-out;
 }
 
 .btn > button{
