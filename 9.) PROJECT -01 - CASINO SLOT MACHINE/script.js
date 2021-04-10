@@ -26,24 +26,20 @@ startBtn.onclick = function(){
                 window.setTimeout(function(){
                 if(value1.innerText === value2.innerText && value1.innerText === value3.innerText)
                 {
-                    window.setTimeout(alert, 1500, "YOU WIN !")
+                    // window.setTimeout(alert, 1100, "YOU WIN !")
                     window.setTimeout(function(){
-                        if(confirm("Do you want to play again ?"))
-                        {
-                            document.location.reload()
-                        }
-                    },2000)
+                        alert("YOU WIN !")
+                        document.location.reload()
+                    },1200)
                 }
                 
                 else{
                 
-                    window.setTimeout(alert, 1500, "YOU LOOSE😥")
+                    // window.setTimeout(alert, 1100, "YOU LOOSE😥")
                     window.setTimeout(function(){
-                        if(confirm("Do you want to play again ?"))
-                        {
-                            document.location.reload()
-                        }
-                    },2000)
+                        alert("YOU LOOSE😥")
+                        document.location.reload()
+                    },1200)
                 }
             },1000)
             }
@@ -51,7 +47,7 @@ startBtn.onclick = function(){
             value2.innerText = getRandomValue()
             value3.innerText = getRandomValue()
         },100)
-
+    
 }
 
 
