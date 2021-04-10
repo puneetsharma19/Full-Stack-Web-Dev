@@ -20,16 +20,16 @@ startBtn.onclick = function(){
     let count = 0;
     let myVar = setInterval(() => {
 
-            count += 1;
-            if(count === 30){
-                clearInterval(myVar)
-                window.setTimeout(function(){
-                if(value1.innerText === value2.innerText && value1.innerText === value3.innerText)
+        count += 1;
+        if(count === 30){
+            clearInterval(myVar)
+            window.setTimeout(function(){
+                if(value1.innerText == value2.innerText && value1.innerText == value3.innerText)
                 {
                     // window.setTimeout(alert, 1100, "YOU WIN !")
                     window.setTimeout(function(){
-                        alert("YOU WIN !")
-                        document.location.reload()
+                    alert("YOU WIN !")
+                    document.location.reload()
                     },300)
                 }
                 
@@ -37,16 +37,18 @@ startBtn.onclick = function(){
                 
                     // window.setTimeout(alert, 1100, "YOU LOOSE😥")
                     window.setTimeout(function(){
-                        alert("YOU LOOSE😥")
-                        document.location.reload()
+                    alert("YOU LOOSE😥")
+                    document.location.reload()
                     },300)
                 }
             },200)
-            }
-            value1.innerText = getRandomValue()
-            value2.innerText = getRandomValue()
-            value3.innerText = getRandomValue()
-        },100)
+        }
+
+        value1.innerText = getRandomValue()
+        value2.innerText = getRandomValue()
+        value3.innerText = getRandomValue()
+        
+    },100)
     
 }
 
