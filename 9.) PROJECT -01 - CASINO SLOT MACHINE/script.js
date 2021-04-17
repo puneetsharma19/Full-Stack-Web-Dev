@@ -1,3 +1,4 @@
+    
     let value1 = document.getElementById('value1')
     let value2 = document.getElementById('value2')
     let value3 = document.getElementById('value3')
@@ -13,9 +14,12 @@ let startBtn = document.getElementById('startBtn')
 
 startBtn.onclick = function(){
     
-    value1.style.animationPlayState = "running";
-    value2.style.animationPlayState = "running";
-    value3.style.animationPlayState = "running";
+    // value1.style.animationPlayState = "running";
+    // value2.style.animationPlayState = "running";
+    // value3.style.animationPlayState = "running";
+    value1.classList.add("value")
+    value2.classList.add("value")
+    value3.classList.add("value")
 
     let count = 0;
     let myVar = setInterval(() => {
