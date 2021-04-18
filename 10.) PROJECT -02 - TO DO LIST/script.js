@@ -30,14 +30,12 @@ function sortTasks() {
 function toggleInputButtons() {
   btnReset.prop('disabled', inpNewTask.val() == '')
   btnAdd.prop('disabled', inpNewTask.val() == '')
-  btnSort.prop('disabled', numberOfDoneTasks() < 1)
-  btnCleanup.prop('disabled', numberOfDoneTasks() < 1)
+  btnSort.prop('disabled', $('#ulTasks .done').length < 1)
+  btnCleanup.prop('disabled', $('#ulTasks .done').length < 1)
+
 }
 
 
-function numberOfDoneTasks(){
-  return $('#ulTasks .done').length
-}
 
 inpNewTask.keypress((e) => {
   if (e.which == 13 && !inpNewTask.val() == '') addItem()
@@ -51,4 +49,13 @@ btnReset.click(() => {
 })
 btnCleanup.click(clearDone)
 btnSort.click(sortTasks)
-ulTasks.click(toggleInputButtons)
+ulTasks.click(()=>{
+  toggleInputButtons()
+  if(ulTasks.children().length>0 && ulTasks.children().length == $('#ulTasks .done').length)
+  {
+    if(confirm('You have completed all your tasks 😊😊..Do u wish to clear the list ?')){
+      document.location.reload()
+    }  
+  }
+})
+
