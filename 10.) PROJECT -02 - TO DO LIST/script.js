@@ -55,7 +55,7 @@ ulTasks.click(()=>{
   {
     setTimeout(()=>{
       if (confirm('You have completed all your tasks 😊..Do u wish to clear the list ?')) {
-        document.location.reload()
+        clearDone()
       }
     },300) 
   }
