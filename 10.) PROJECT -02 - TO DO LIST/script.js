@@ -53,9 +53,11 @@ ulTasks.click(()=>{
   toggleInputButtons()
   if(ulTasks.children().length>0 && ulTasks.children().length == $('#ulTasks .done').length)
   {
-    if(confirm('You have completed all your tasks 😊😊..Do u wish to clear the list ?')){
-      document.location.reload()
-    }  
+    setTimeout(()=>{
+      if (confirm('You have completed all your tasks 😊..Do u wish to clear the list ?')) {
+        document.location.reload()
+      }
+    },300) 
   }
 })
 
