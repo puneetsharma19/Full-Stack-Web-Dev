@@ -85,7 +85,7 @@ function Fruit(taste, color){
 //new keyword
 let mango = new Fruit('sweet','yellow');
 let orange = new Fruit('sour','orange');
-
+let seb = new Fruit('meetha','lal')
 
 
 var apple = {

@@ -12,7 +12,7 @@ let s = `this is ${p} `
 console.log(s)
 
 //using line breaks for long strings for eg:
-let longstr = 'this is\
+let longstr = 'this is \
 a very long\
  string'
 console.log(longstr)
