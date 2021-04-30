@@ -11,7 +11,8 @@ const db = new Sequelize({
 // rows of table(relation) are basically objects
 
 //to make models (Tasks is my model)
-//This tasks is bascially the javascript representation of table preset in the database
+//This Tasks is bascially the javascript representation of table preset in the database
+//'task' passed as parameter is basically the name of the table
 const Tasks = db.define('task',{
     //here we define columns
     id:{
