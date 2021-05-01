@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const { SET_DEFERRED } = require('sequelize/types/lib/deferrable')
+
 
 const db = new Sequelize('shopdb', 'shopper','shoppass',{
     host: 'localhost',
@@ -10,7 +10,7 @@ const db = new Sequelize('shopdb', 'shopper','shoppass',{
     }
 })
 
-const user = db.define('users', {
+const User = db.define('user', {
     id:{
         type: Sequelize.DataTypes.INTEGER,
         autoIncrement: true,
@@ -23,7 +23,7 @@ const user = db.define('users', {
 })
 
 
-const Product = db.define('products', {
+const Product = db.define('product', {
     id:{
         type: Sequelize.DataTypes.INTEGER,
         autoIncrement: true,

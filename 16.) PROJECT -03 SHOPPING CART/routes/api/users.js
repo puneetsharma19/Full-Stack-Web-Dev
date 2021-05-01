@@ -1,4 +1,4 @@
-const user = require('../../db').User
+const User = require('../../db').User
 const route = require('express').Router()
 
 route.get('/', (req,res)=>{
