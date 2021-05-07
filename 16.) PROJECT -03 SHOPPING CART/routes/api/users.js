@@ -1,27 +1,32 @@
 const User = require('../../db').User
 const route = require('express').Router()
 
-route.get('/', (req,res)=>{
-    //We want to send an array of all  users from our database
+route.get('/', (req, res) => {
+    // We want to send an array of all users
+    // From our database here
+
     User.findAll()
-        .then((users)=>{
+        .then((users) => {
             res.status(200).send(users)
         })
-        .catch((err)=>{
+        .catch((err) => {
             res.status(500).send({
-                error: "Could not retrieve users"
+                error: "Could not retrive users"
             })
         })
+
 })
 
+route.post('/', (req, res) => {
+    // We expect the req to have name in it
+    // We will create a new user 
 
-route.post('/',(req,res)=>{
-    //we expect the req to have a name in it so we will create a new user
     User.create({
         name: req.body.name
-    }).then((user)=>{
+    }).then((user) => {
         res.status(201).send(user)
-    }).catch((err)=>{
+    }).catch((err) => {
+        console.log(req.body)
         res.status(501).send({
             error: "Could not add new user"
         })
