@@ -6,46 +6,41 @@ const messageContainer = document.getElementById('msgArea')
 const btnSubmit = document.getElementById('btnSubmit')
 
 
-
-// const append = (message, position)=>{
-//     const messageElement = document.createElement('div')
-//     const footer = document.createElement('div')
-//     footer.classList.add("d-flex", "justify-content-end")
-//     var d = new Date();
-//     d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
-//     footer.innerHTML = `<b><em>${d}</em></b>`
-
-//     messageElement.innerHTML = message
-//     messageElement.classList.add("message", position)
-//     if(position === 'middle')
-//         messageElement.classList.add("col-10")
-//     else messageElement.classList.add("col-8")
-//     if(position != 'middle')
-//         messageElement.appendChild(footer)
-//     messageContainer.append(messageElement)
-    
-//     var xH = messageContainer.scrollHeight; 
-//     messageContainer.scrollTo(0, xH);
-
-// }
-
 const append = (message, position)=>{
 
     const box = document.createElement('div')
     box.classList.add("d-flex","flex-wrap", position)
     if(position == 'middle'){
         box.classList.add("col-10", "justify-content-center")
+        box.style.marginBottom = "0.55%";
     }
     else{
-        if(position == 'left')
-            box.classList.add("col-8", "justify-content-start")
-        else
-            box.classList.add("col-8", "justify-content-end")
+        if(position == 'left'){
+            box.classList.add("col-9", "justify-content-start")
+            messageContainer.style.paddingLeft = "0px"
+            box.style.paddingLeft = "0.55%"
+        }
+        else{
+            box.classList.add("col-9", "justify-content-end")
+            messageContainer.style.paddingRight = "0px"
+            box.style.paddingRight = "0.55%"
+        }
     }
+
 
     const messageElement = document.createElement('div')
     messageElement.innerHTML = message
     messageElement.classList.add("msg-content")
+
+
+    const footer = document.createElement('div')
+    footer.classList.add("d-flex", "justify-content-end")
+    var d = new Date();
+    d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
+    footer.innerHTML = `<b><em>${d}</em></b>`
+    if(position != 'middle')
+        messageElement.appendChild(footer)
+
     box.appendChild(messageElement)
     messageContainer.append(box)
 
@@ -54,12 +49,18 @@ const append = (message, position)=>{
 
 }
 
+if(messageInput === document.activeElement){
+    console.log("typing")
+    var xH = messageContainer.scrollHeight; 
+    messageContainer.scrollTo(0, xH);
+}
+
 
 btnSubmit.onclick = function(){
     console.log("clicked")
     let message = messageInput.value;
     if(message != null){
-        append(`<b><i>You:</i></b> ${message}`, 'right')
+        append(`<b><i>You</i></b><br> ${message}`, 'right')
         socket.emit('send', message)
         messageInput.value = ''
     }
@@ -74,7 +75,7 @@ socket.on('user-joined', name=>{
 })
 
 socket.on('receive', data=>{
-    append(`<b><i>${data.naam}:</i></b> ${data.msg} `,'left')
+    append(`<b><i>${data.naam}</i></b><br> ${data.msg} `,'left')
 })
 
 socket.on('left', name=>{
