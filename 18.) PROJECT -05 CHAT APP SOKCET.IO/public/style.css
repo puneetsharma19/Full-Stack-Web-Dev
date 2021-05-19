@@ -5,7 +5,7 @@
     clear: both;
     margin-right: 0px;
     animation: slideLeft, slideDown;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-iteration-count: 1;
 
 }
@@ -16,7 +16,7 @@
     float: left;
     clear: both;
     animation:  slideRight, slideDown;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-iteration-count: 1;
 
 }
@@ -57,18 +57,18 @@
 
 @keyframes slideDown{
     0%{
-        transform: translateY(-25px);
+        transform: translateY(-35px);
     }
 }
 
 @keyframes slideLeft{
     0%{
-        transform: translateX(-25px);
+        transform: translateX(-45px);
     }
 }
 
 @keyframes slideRight{
     0%{
-        transform: translateX(25px);
+        transform: translateX(45px);
     }
 }

@@ -23,7 +23,14 @@ io.on('connection', socket =>{
         socket.broadcast.emit('left', users[socket.id])
         delete users[socket.id]
     })
+
+    socket.on('start-typing', name=>{
+        socket.broadcast.emit('typing', name)
+    })
     
+    socket.on('remove-header',() =>{
+        socket.broadcast.emit('hatao-header')
+    })
 
 })
 

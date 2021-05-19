@@ -54,6 +54,9 @@ Comments.belongsTo(Users)
 Posts.hasMany(Comments)
 Comments.belongsTo(Posts)
 
+//Cart.hasMany(Products)
+//Cart.belongs(Users)
+
 module.exports = {
     db,
     Users,

@@ -45,6 +45,9 @@ db.sync()
     .then(() => console.log("Database has been synced"))
     .catch((err) => console.error("Error creating database"))
 
+//Cart.hasMany(Products)
+//Cart.belongsTo(Users)
+
 exports = module.exports = {
     User, Product
 }

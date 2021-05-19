@@ -4,7 +4,10 @@ const socket = io('http://192.168.43.224:3344')
 const messageInput = document.getElementById('messageInp')
 const messageContainer = document.getElementById('msgArea')
 const btnSubmit = document.getElementById('btnSubmit')
+const header = document.getElementById('header')
 
+var audioObj = new Audio('../sounds/whatsapp_mensaje.mp3')
+// var sound = new Audio('sounds\\\tom-3.mp3');
 
 const append = (message, position)=>{
 
@@ -19,6 +22,7 @@ const append = (message, position)=>{
             box.classList.add("col-9", "justify-content-start")
             messageContainer.style.paddingLeft = "0px"
             box.style.paddingLeft = "0.55%"
+            audioObj.play()
         }
         else{
             box.classList.add("col-9", "justify-content-end")
@@ -49,26 +53,29 @@ const append = (message, position)=>{
 
 }
 
-if(messageInput === document.activeElement){
-    console.log("typing")
-    var xH = messageContainer.scrollHeight; 
-    messageContainer.scrollTo(0, xH);
-}
-
 
 btnSubmit.onclick = function(){
     console.log("clicked")
     let message = messageInput.value;
-    if(message != null){
+    if(message != ''){
         append(`<b><i>You</i></b><br> ${message}`, 'right')
         socket.emit('send', message)
         messageInput.value = ''
     }
+    socket.emit('remove-header')
 }
 
 
 let naam = prompt("Enter your name to join: ")
 socket.emit('new-user-joined', naam);
+
+messageInput.onkeypress = function(){
+    console.log("typing")
+    var xH = messageContainer.scrollHeight; 
+    messageContainer.scrollTo(0, xH);
+    socket.emit('start-typing', naam);
+}
+
 
 socket.on('user-joined', name=>{
     append(`<b>${name}</b> joined the chat`,'middle')
@@ -81,3 +88,12 @@ socket.on('receive', data=>{
 socket.on('left', name=>{
     append(`<b>${name}</b> left the chat`, 'middle')
 })
+
+socket.on('typing', (name)=>{
+    header.innerHTML = `<br><b>${name}</b> is typing..<br>`
+})
+
+socket.on('hatao-header', ()=>{
+    header.innerHTML = ""
+})
+
