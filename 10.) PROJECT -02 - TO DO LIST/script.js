@@ -29,7 +29,7 @@ function sortTasks() {
 
 function toggleInputButtons() {
   btnReset.prop('disabled', inpNewTask.val() == '')
-  btnAdd.prop('disabled', inpNewTask.val() == '')
+  btnAdd.prop('disabled', inpNewTask.val().trim() == '')
   btnSort.prop('disabled', $('#ulTasks .done').length < 1)
   btnCleanup.prop('disabled', $('#ulTasks .done').length < 1)
 
@@ -38,11 +38,13 @@ function toggleInputButtons() {
 
 
 inpNewTask.keypress((e) => {
-  if (e.which == 13 && !inpNewTask.val() == '') addItem()
+  if (e.which == 13 && !inpNewTask.val() == '' && !inpNewTask.val().trim() == '') addItem()
 })
 inpNewTask.on('input', toggleInputButtons)
 
+
 btnAdd.click(addItem)
+
 btnReset.click(() => {
   inpNewTask.val('')
   toggleInputButtons()
@@ -60,4 +62,3 @@ ulTasks.click(()=>{
     },300) 
   }
 })
-
