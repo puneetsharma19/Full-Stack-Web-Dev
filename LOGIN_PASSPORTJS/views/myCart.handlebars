@@ -1,0 +1,55 @@
+{{#each myProducts}}
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{cover_image}} alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+    <p class="card-text">{{category}}</p>
+  </div>
+  <form action="/startPayment" method="POST">
+    <button class="btn btn-primary" type="submit" name="productId" value={{_id}}>
+        Buy
+    </button>
+  </form>
+</div>
+{{/each}}
+
+<div style="height: 15vh;"></div>
+{{!-- ///////////////////////////////////////////////footer//////////////////////////////////////// --}}
+
+<div class="card-footer" style="background-color: rgb(22, 19, 19);">
+  <div class="card-deck">
+  <div class="card" style="background-color: rgb(22, 19, 19); color:blanchedalmond">
+    <div class="card-body">
+      <h5 class="card-title">Get to Know Us</h5>
+      <p class="card-text">
+        <div> About us</div>
+        <div> We care</div>
+        <div> Gift a smile</div>
+      </p>
+    </div>
+  </div>
+  <div class="card" style="background-color: rgb(22, 19, 19); color:blanchedalmond">
+    <div class="card-body">
+      <h5 class="card-title">Connect with us</h5>
+      <p class="card-text">
+        <div> Facebook</div>
+        <div> Instagram</div>
+        <div> Whatsapp</div>
+      </p>
+     
+    </div>
+  </div>
+  <div class="card" style="background-color: rgb(22, 19, 19); color:blanchedalmond">
+    <div class="card-body">
+      <h5 class="card-title">Let us help you</h5>
+      <p class="card-text">
+        <div> Your account</div>
+        <div> Returns</div>
+        <div> Help</div>
+      </p>
+      
+    </div>
+  </div>
+</div>
+</div>

@@ -12,7 +12,8 @@ async function task(){
         console.log("Students whose age is greater than 12")
 
         const q1 = await Student.findAll({
-            where : {age: {$gt:12}}
+            where : {age: {$gt:
+                12}}
         })
 
         q1.forEach(s => console.log(

@@ -6,8 +6,6 @@ const messageContainer = document.getElementById('msgArea')
 const btnSubmit = document.getElementById('btnSubmit')
 const header = document.getElementById('header')
 
-var audioObj = new Audio('../sounds/whatsapp_mensaje.mp3')
-// var sound = new Audio('sounds\\\tom-3.mp3');
 
 const append = (message, position)=>{
 
@@ -62,7 +60,6 @@ btnSubmit.onclick = function(){
         socket.emit('send', message)
         messageInput.value = ''
     }
-    socket.emit('remove-header')
 }
 
 
@@ -93,7 +90,5 @@ socket.on('typing', (name)=>{
     header.innerHTML = `<br><b>${name}</b> is typing..<br>`
 })
 
-socket.on('hatao-header', ()=>{
-    header.innerHTML = ""
-})
+
 
