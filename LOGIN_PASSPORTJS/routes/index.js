@@ -110,7 +110,6 @@ router.post('/dashboard', isAuth, async(req,res)=>{
 router.get('/myCart', isAuth, async(req,res)=>{
 
     const myProducts = await Product.find({_id:{$in:req.user.cart}}).lean()
-    // console.log(myProducts)
     res.render('myCart', {myProducts})
 })
 

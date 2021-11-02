@@ -1,0 +1,103 @@
+<div id="container" class="container-fluid" style="width: auto;height: 100%">
+
+    <div class="mt-4 mb-4 mx-auto">
+        <h1 style="text-align: center;">Welcome to Sales Prediction Web App</h1>
+    </div>
+
+    <div style="height: 10vh;"></div>
+
+    <div class="card mx-auto col-sm-7" >
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Select Product category</h5>
+            <div class="d-flex justify-content-center flex-wrap">
+                <button id="booksBtn" type="button" class="btn btn-outline-info m-2 col-md-3 ">Books</button>
+                <button id="clothesBtn" type="button" class="btn btn-outline-info m-2 col-md-3 ">Clothes</button>
+                <button id="gamesBtn" type="button" class="btn btn-outline-info m-2 col-md-3 ">Video Games</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 10vh;"></div>
+
+    <div class="card mx-auto col-sm-7 mb-4" id="booksForm" style="display: none;"> 
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Enter Book Attributes</h5>
+            <form action="/predictions" method="POST">
+                <div class="form-group">
+                    <label>Genre</label>
+                    <input type="text" class="form-control" name="genre" placeholder="Enter genre" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Publisher Type</label>
+                    <input type="text" class="form-control" name="publisherType" placeholder="Enter publisher type" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Publisher Name</label>
+                    <input type="text" class="form-control" name="publisherName" placeholder="Enter publisher name" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Average Rating</label>
+                    <input type="number" step="0.01" class="form-control" name="averageRating" placeholder="Enter average rating" required="true">
+                </div>
+                <div class=" d-flex justify-content-center">
+                    <button type="submit" class="btn btn-outline-info m-2 col-md-3 ">Make Predictions</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card mx-auto col-sm-7 mb-4" id="gamesForm" style="display: none;"> 
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Enter Game Attributes</h5>
+            <form action="/predictions" method="POST">
+                <div class="form-group">
+                    <label>Genre</label>
+                    <input type="text" class="form-control" name="genre" placeholder="Enter genre" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Platform</label>
+                    <input type="text" class="form-control" name="platform" placeholder="Enter platform" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Developer</label>
+                    <input type="text" class="form-control" name="developer" placeholder="Enter developer" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Average Rating</label>
+                    <input type="number" step="0.01" class="form-control" name="averageRating" placeholder="Enter average rating" required="true">
+                </div>
+                <div class=" d-flex justify-content-center">
+                    <button type="submit" class="btn btn-outline-info m-2 col-md-3 ">Make Predictions</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card mx-auto col-sm-7 mb-4" id="clothesForm" style="display: none;"> 
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Enter Cloth Attributes</h5>
+            <form action="/predictions" method="POST">
+                <div class="form-group">
+                    <label>Product color</label>
+                    <input type="text" class="form-control" name="productColor" placeholder="Enter product color" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Product Size</label>
+                    <input type="text" class="form-control" name="productSize" placeholder="Enter product size" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Retail Price</label>
+                    <input type="number" step="0.01" class="form-control" name="retailPrice" placeholder="Enter retail price" required="true">
+                </div>
+                <div class="form-group">
+                    <label>Merchant Rating</label>
+                    <input type="number" step="0.01" class="form-control" name="merchantRating" placeholder="Enter merchant rating" required="true">
+                </div>
+                <div class=" d-flex justify-content-center">
+                    <button type="submit" class="btn btn-outline-info m-2 col-md-3 ">Make Predictions</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
